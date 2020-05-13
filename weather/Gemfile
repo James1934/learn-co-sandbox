@@ -1,0 +1,27 @@
+source "https://rubygems.org"
+
+# always looks for the newest version
+gem 'nokogiri'
+
+# specific version
+gem 'rails', '3.0.0.beta3'
+
+# specific range: >, >=, <, <=
+gem 'rack',  '>=1.0'
+
+# considers any 1.1.* versions
+gem 'thin',  '~>1.1'
+
+# when lib name differs from gem name
+gem 'rack-cache', :require => 'rack/cache'
+
+# install but don't require
+gem 'rubocop', :require => false
+
+# associate gem to group(s)
+gem 'debugger', :group => [:development, :test]
+
+group :test do
+  gem 'minitest'
+end
+
